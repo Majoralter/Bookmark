@@ -14,12 +14,16 @@
     --Very-Dark-Blue: hsl(229, 31%, 21%);
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* MOBILE NAVIGATION */
 
 .mobile-logo{
     display: none;    
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     left: 0;
     height: 24px;
     width: auto;
@@ -36,8 +40,9 @@
     gap: 5px;
     width: 31px;
     height: 31px;
-    position: fixed;
+    position: absolute;
     z-index: 3;
+    top: 0;
     right: 0;
     margin: 50px 20px 0px 0px;
     cursor: pointer;
@@ -74,7 +79,7 @@
 .mobile-nav{
     overflow: hidden;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     height: 0px;
     width: 100%;
     display: flex;
@@ -154,7 +159,7 @@ nav{
 
 nav a{
     text-decoration: none;
-    color: #000;
+    color: var(--Very-Dark-Blue);
     font-size: 14px;
     transition: color .3s ease-in-out;
 }
@@ -195,4 +200,116 @@ nav a .nav-cta{
     #menu{
         display: flex;
     }
+}
+
+/* HERO SECTION  */
+
+main{
+    padding: 0px 0px 0px 150px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.main-text h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: var(--Very-Dark-Blue);
+}
+
+.main-text p{
+    color: var(--Grayish-Blue);
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.main-cta{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.main-cta button{
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.chrome{
+    background-color: var(--Soft-Blue);
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.chrome:hover{
+    background: none;
+    color: var(--Soft-Blue);
+    outline: solid 1.5px var(--Soft-Blue);
+}
+
+.firefox{
+    background-color: #fff;
+    color: var(--Very-Dark-Blue);
+    box-shadow: 0px 2px 5px 1px #79797983;
+    transition: all .3s ease-in-out;
+}
+
+.firefox:hover{
+    background: none;
+    outline: solid 1.5px var(--Very-Dark-Blue);
+}
+
+
+/* HERO SECTION MEDIA QUERIES */
+
+@media (max-width:820px){
+    main{
+        padding: 0px 20px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 30px;
+    }
+
+
+    .main-text{
+        text-align: center;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-text h1{
+        font-size: 30px;
+    }
+
+    .main-text p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    br{
+        display: none;
+    }
+
+    .main-cta{
+        gap: 10px;
+        justify-content: center;
+    }
+        main img {
+            height: 250px;
+            width: auto;
+        }
 }
