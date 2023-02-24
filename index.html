@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
     <title>Bookmark</title>
 </head>
 <body>
@@ -65,13 +69,77 @@
             </div>
         </div>
 
-        <div class="hero-images">
-
         <img src="images/illustration-hero.svg" alt="">
-        <div class="blue-pill"></div>
-
-        </div>
     </main>
+    <section class="section-one">
+        <div class="section-one-text">
+            <h2>
+                Features
+            </h2>
+            <p>
+               Our aim is to make it quick an easy to access your <br> favorite websites. Your bookmarks sync between your devices <br> so you can access them on the go. 
+            </p>
+        </div>
+        <div class="slider-container">
+        <div class="step-indicator">
+            <button class="step-btn" onclick="currentSlide(1)">Simple Bookmarking</button>
+            <button class="step-btn" onclick="currentSlide(2)">Speedy Searching</button>
+            <button class="step-btn" onclick="currentSlide(3)">Easy Sharing</button>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="slides slides-1 fade">
+                <img src="images/illustration-features-tab-1.svg" alt="">
+                <div class="slides-text">
+                  <h2>
+                    Bookmark in one click
+                  </h2>
+                  <p>
+                    Oragnize your bookmarks however you like. Our <br> simple drag-and-drop interface gives you complete <br> control over how you manage your favorite sites.
+                  </p>
+
+                  <button class="slides-btn">
+                    More Info
+                  </button>
+                </div>
+            </div>
+            <div class="slides slide-2 fade">
+                                <img src="images/illustration-features-tab-2.svg" alt="">
+                <div class="slides-text">
+                  <h2>
+                    Intelligent search
+                  </h2>
+                  <p>
+                    Our powerful search feature will help you find saved <br> sites in no time at all. No need to trawl through all of <br> your bookmarks.
+                  </p>
+
+                  <button class="slides-btn">
+                    More Info
+                  </button>
+                </div>
+            </div>
+            <div class="slides slide-3 fade">
+                <img src="images/illustration-features-tab-3.svg" alt="">
+                <div class="slides-text">
+                  <h2>
+                    Share your bookmarks
+                  </h2>
+                  <p>
+                    Easily share your bookmarks and collections with <br> others. Create a shareable link that you can send at <br> the click of a button.
+                  </p>
+
+                  <button class="slides-btn">
+                    More Info
+                  </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>  
 </body>
-<script src="index.js"></script>
+
+
 </html>
