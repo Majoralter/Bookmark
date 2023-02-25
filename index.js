@@ -46,3 +46,23 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].classList.add("active-btn")
 }
+
+let faqEl = document.querySelectorAll(".faq")
+let i;
+
+for(let i = 0; i < faqEl.length; i++){
+  faqEl[i].addEventListener("click",()=>{
+    let faqAnswer = document.querySelectorAll(".faq-answer")
+    if(faqAnswer[i].style.display === "block"){
+      faqAnswer[i].style.display = "none"
+    } else{
+      faqAnswer[i].style.display = "block"
+    }
+    let dropdownArrow = document.getElementsByClassName("arrow")
+
+    dropdownArrow[i].classList.toggle("arrow-rotate")
+  })
+}
+
+
+
