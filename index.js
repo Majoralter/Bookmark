@@ -63,6 +63,3 @@ for(let i = 0; i < faqEl.length; i++){
     dropdownArrow[i].classList.toggle("arrow-rotate")
   })
 }
-
-
-
